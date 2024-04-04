@@ -1,11 +1,10 @@
-import Fastify from 'fastify'
+import express from 'express'
+import { Router } from 'express'
 
-const app = Fastify()
+const app = express()
+const router = Router()
 
-app.get('/health-check', (request, reply) => {
-    return { message: 'OK' }
+app.listen(3333, () => {
+    console.log('🚀 Server is running on http://localhost:3333!')
 })
 
-app.listen({
-    port: 3333
-})

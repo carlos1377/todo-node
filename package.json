@@ -12,7 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "fastify": "^4.26.2",
+    "express": "^4.19.2",
     "prisma": "^5.11.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "bcrypt": "^5.1.1"
   }
 }

@@ -9,3 +9,34 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Task {
+  id  Int   @id @default(autoincrement())
+  title String
+  description String?
+  priority Int
+  done Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+}
+
+model List {
+  id Int   @id @default(autoincrement())
+  name String
+  position Int
+  description String?
+}
+
+model Category {
+  id Int   @id @default(autoincrement())
+  name String
+  color String
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  email String
+  password String
+}
